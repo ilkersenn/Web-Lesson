@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Metni Labela Aktar ve Bir Boyut Küçük Yaz</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body style="background-color: purple; color: white;">
+
+	<input type="text" placeholder="Açıklama Yazınız" id="aciklama">
+	<input type="button" id="button1" value="Metni Aktar">
+	<p id="icerik1"></p>
+	<p id="icerik2"></p>
+
+	<script>
+		
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				var a = $("#aciklama").val(); // val() = value()
+				$("#icerik1").html("<h3>" + a + "<h3>"); // html() = innerHTML
+				$("#icerik2").text(a); // text() = innerText
+			});
+		});
+
+	</script>
+
+
+
+</body>
+</html>

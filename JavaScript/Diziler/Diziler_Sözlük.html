@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Türkçe İngilizce Sözlük</title>
+
+	<script type="text/javascript">
+		
+		var ingilizce=["apple","bottle","computer","book","mouse","wall","pen","paper","table"];
+
+		var turkce=["elma","şişe","bilgisayar","kitap","fare","duvar","kalem","kağıt","masa"];
+
+		function cevir() {
+			
+			var siraNo;
+			siraNo = ingilizce.indexOf(document.getElementById("arananKelime").value);
+
+			if (siraNo>=0) {
+				document.getElementById("turkce").innerText="Kelimenin Türkçe Karşılığı : " + turkce[siraNo];
+			}
+
+			else{
+				alert("Bu Kelime Sözlükte Yok");
+			}
+		}
+
+	</script>
+
+</head>
+<body style="background-color: orange;">
+
+	<div>
+		
+		<input type="text" id="arananKelime" placeholder="İngilizce Kelime">
+		<input type="button" value="Çevir" onclick="cevir()">
+
+		<h3 id="turkce">Kelimenin Türkçe Karşılığı : </h3>
+
+	</div>
+
+
+
+</body>
+</html>

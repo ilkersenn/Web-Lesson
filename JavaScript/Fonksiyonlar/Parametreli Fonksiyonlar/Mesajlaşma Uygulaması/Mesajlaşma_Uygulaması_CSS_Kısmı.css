@@ -1,0 +1,54 @@
+body{
+	background-color: gray; 
+	font-weight: bold;
+}
+
+#genelcerceve{
+	background-color:lightblue;
+	border-radius: 10px;
+	width: 400px; 
+	height: 500px; 
+}
+
+#mesajgirisi{
+	background-color: white;
+	border-radius: 10px;
+ 	width: 400px; 
+ 	height: 70px; 
+}
+
+#mesajgirisi > img{ 
+	width: 50px; 
+	height: 50px; 
+	float: left;
+ 	margin-left:30px; 
+ 	margin-top:10px; 
+}
+
+#mesajgirisi>input{ 
+	margin-top:30px; 
+	margin-left:10px;
+}
+
+#mesajkutuları{ 
+	background-color: white;
+	border-radius: 3px;
+ 	width: 380px; 
+ 	height: auto; 
+ 	margin-left:10px;
+}
+
+.gidenMesaj{ 
+	border-bottom:2px gray solid;
+}
+
+.gidenMesaj > img{ 
+	width: 20px; 
+	height: 20px; 
+	margin:5px 5px 0px 5px; 
+}
+
+#tarih{ 
+	color:gray; 
+	font-size:10px;
+}

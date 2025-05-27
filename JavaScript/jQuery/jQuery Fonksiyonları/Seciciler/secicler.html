@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Seçiciler</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1 id="id-icerik">ID ile tanımlanmış H1</h1>
+    <h1 class="class-icerik">Class ile tanımlanmış H1</h1>
+
+    <h2 id="id-icerik1">ID ile tanımlanmış H2</h2>
+    <h2 class="class-icerik1">Class ile tanımlanmış H2</h2>
+
+    <h3 id="id-icerik2">ID ile tanımlama H3</h3>
+    <h3 class="class-icerik2">Class ile tanımlanmış H3</h3>
+    <script>
+        $(document).ready(function(){ //Diğer kodları yazmadan önce bizim bu fonksiyonu yazmamız gerekiyor.
+        //Hide-Show
+            // ID'li tanımlama
+            $("#id-icerik").hide(500)
+            $("#id-icerik").show(500)
+        
+            //Class'lı tanımlama
+            $(".class-icerik").hide(1000)
+            $(".class-icerik").show(1000)
+
+            $("#id-icerik1").animate({
+                width: "300px",
+                height: "100px",
+                opacity: 0.5
+                //Burada sadece sayısal değer alabilen "width, height, opacity, left, top" gibi özellikler kullanılır.
+                //Renk özellikleri doğrudan desteklenmez
+                //CSS kuralları burada da geçerlidir.
+            },1000)
+
+            $(".class-icerik1").animate({
+                width: "300px",
+                height: "100px"
+            }, "slow");
+
+            $("#id-icerik2").animate({
+                width: "300px",
+                height: "100px"
+            }, 1000, "linear")
+
+            $(".class-icerik2").animate({
+                height: "200px"
+            }, 4000, function(){
+                alert("Animasyon tamamlandı!")
+            })
+
+        })
+    </script>
+    <!--
+    .animate içerisinde bulununan bir sürü parametre var. Bu parametrelerden bazıları.
+    ---Properties---
+        Animasyon sırasında değiştirmek istenilen CSS özellikleri buraya girilir.
+        Örnek kod 24. ve 32. satırlar arasında
+
+    ---Duration---
+        Animasyonun süresini belirler. ms veya "slow, fast" gibi anahtar kelimeler kullanılarak hızı değiştirilir.
+        Örnek kod 34. ve 36. satırlar arasında
+
+    ---Easing---
+        Animasyonun başlangıç, animasyon anı ve sonundaki hızı belirler.
+        Varsayılan: swing, başlangıçta yavaş, ortası hızlı, sonu yavaş animasyon hızındadır.
+        Alternatif: linear, tamamıyla sabit hız
+        Örnek kod 41. ve 44. satırlar arasında
+    
+    ---Complete (Callback)---
+        Animasyon tamamlandığında çalışır.
+        Örnek kod 47. ve 51. satırlar arasında
+    -->
+</body>
+</html>
