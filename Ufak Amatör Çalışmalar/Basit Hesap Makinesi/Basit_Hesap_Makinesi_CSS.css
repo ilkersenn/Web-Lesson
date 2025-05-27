@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container{
+    text-align: centers;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: solid black 1px;
+    flex-direction: column;
+    max-height: 800px;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.kırmızı-başlık{
+
+    color: red;
+}
+
+.sonuc{
+    font-size: large;
+}
