@@ -1,0 +1,14 @@
+@model List<MVCProject.Models.KitapModel>
+    <h2>Kitap Listesi</h2> <!--Kitap Adı ve Yazar değerinin Kitap Adı, Yazar başlıklarının altında bulunduğu bir tablo oluşturduk-->
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Kitap Adı</th>
+            <th>Yazar</th>
+        </tr>
+        @foreach(var kitap in Model){ //kitap Model içinde tüm indexlerden geçiyor ve KitapAdi, Yazar olan başlıkları tabloya ekliyor. 
+            <tr>
+                <td>@kitap.KitapAdi</td>
+                <td>@kitap.Yazar</td>
+            </tr>
+        }
+    </table>

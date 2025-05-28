@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Zamanlayıcılar</title>
+
+	<script type="text/javascript" language="javascript">
+		
+	//setTimeout = Ayarlanan zaman aralığı geldiğinde içindeki kodları sadece bir kez çalıştıran ve durduran zamanlayıcıdır.
+
+	setTimeout(() => {
+
+		document.getElementById("ekran1").style.display="none";
+
+	}, 5000);	
+
+
+	//------------------------------------------------------------------------
+
+	//setInterval = : Ayarlanan zaman aralığı geldiğinde içindeki kodları çalıştıran ve çalışmasını devam ettiren zamanlayıcıdır. //Bu zamanlayıcı durdurulmadığı sürece sürekli çalışır.
+
+	var sayac = 10;
+	var a = setInterval(function(){
+		sayac = sayac-1;
+		document.getElementById("ekran2").innerHTML = "<b>10 Saniyelik Geri Sayım: </b>" + sayac;
+		if (sayac == 0) {
+
+			clearInterval(a);
+
+		}
+	}, 1000);
+
+
+	</script>
+
+</head>
+<body>
+
+	<div id="ekran1"><b> Bu ekran 5 saniye sonra kaybolacak. </b></div><br>
+	<div id="ekran2"><b>10 Saniyelik Geri Sayım: </b></div>
+
+</body>
+</html>

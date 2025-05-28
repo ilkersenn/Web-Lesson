@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Çarpım Tablosu</title>
+
+	<script type="text/javascript">
+		
+		function sayicarp() {
+			
+			var x = document.getElementById("sayiid").value;
+			var i;
+			var sonuc = "";
+			for (i = 1; i <= 10; i++) {
+				sonuc += x + " x " + i + " = " + (x*i) + "<br>";
+				document.getElementById("carpim").innerHTML = sonuc;
+
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<input type="number" placeholder="Sayı Giriniz..." id="sayiid">
+	<input type="button" value="Çarpım Tablosunu Çıkar" onclick="sayicarp()">
+	<h1 id="carpim"></h1>
+
+</body>
+</html>

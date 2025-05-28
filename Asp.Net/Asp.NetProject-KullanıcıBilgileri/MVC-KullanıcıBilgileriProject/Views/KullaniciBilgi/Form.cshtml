@@ -1,0 +1,31 @@
+@model MVC_KullaniciBilgileriProject.Models.KullaniciBilgiModel
+
+
+<h2>Kullanıcı Bilgi</h2>
+
+<form asp-action="Gönder" method="post">
+
+    <label asp-for="Ad">Ad: </label><br>
+    <input asp-for="Ad"/>
+    <span asp-validation-for="Ad" class="text-danger"></span> <!--Boş bırakılırsa uyarı verilecek.-->
+
+    <br>
+
+    <label asp-for="Soyad">Soyad: </label><br>
+    <input asp-for="Soyad"/>
+    <span asp-validation-for="Soyad" class="text-danger"></span> <!--Boş bırakılırsa uyarı verilecek.-->
+
+    <br>
+
+    <label asp-for="Yaş">Yaş: </label><br>
+    <input asp-for="Yaş"/>
+    <span asp-validation-for="Yaş" class="text-danger"></span><br> <!--Boş bırakılırsa uyarı verilecek.-->
+
+    <br>
+
+    <button type="submit">Gönder</button>
+</form>
+
+@section Scripts { <!-- asp-... elemanlarını kullanmak için çağırdık.-->
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

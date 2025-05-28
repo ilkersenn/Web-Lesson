@@ -1,0 +1,11 @@
+@model MVCProject.Models.KitapModel
+<h2>Yeni Kitap Ekle</h2>
+<form method="post"> <!--Post ve Get olmak üzere 2 methodumuz var Get url'de gözüken güvenliği az olan method Post ise gizli yani daha güvenlikli.-->
+    <label>Kitap Adı:</label>
+    <input type="text" name="KitapAdi"/>
+    <br/>
+    <label>Yazar:</label>
+    <input type="text" name="Yazar"/>
+    <br/>
+    <button type="submit">Kaydet</button>
+</form>

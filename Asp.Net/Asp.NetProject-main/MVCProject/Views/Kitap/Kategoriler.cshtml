@@ -1,0 +1,11 @@
+@{ //@ C# dilinde değişken, method vs. kullanılıcaksa eklenmelidir. 
+    ViewData["Title"] = "Kitap Bilgisi"; //ViewBag gibidir. ViewData içinde Title Anahtar Kelimesi altında Kitap bilgisi string ifadesini taşıyoruz. 
+}
+<h2>@ViewData["Title"]</h2> 
+<div style="text-align: center;">
+    <p><strong>Kitap Adı:</strong>
+    @ViewBag.Kitap.KitapAdi</p> <!--ViewBag ile KitapModel'e Controller kısmında atadığımız KitapAdi'ni ekrana yazdırıyoruz.-->
+
+    <p><strong>Yazar:</strong>
+    @ViewBag.Kitap.Yazar</p><!--ViewBag ile KitapModel'e Controller kısmında atadığımız Yazar'ı ekrana yazdırıyoruz.-->
+</div>

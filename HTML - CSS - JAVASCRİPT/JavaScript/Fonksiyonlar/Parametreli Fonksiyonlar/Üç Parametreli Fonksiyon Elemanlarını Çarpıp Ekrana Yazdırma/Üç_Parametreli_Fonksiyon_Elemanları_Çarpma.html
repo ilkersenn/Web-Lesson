@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çarpma Fonksiyonu</title>
+</head>
+<body>
+    
+    <label for="sayi1">Birinci Sayıyı Girin:</label>
+    <input type="number" id="sayi1"><br><br>
+
+    <label for="sayi2">İkinci Sayıyı Girin:</label>
+    <input type="number" id="sayi2"><br><br>
+
+    <label for="sayi3">Üçüncü Sayıyı Girin:</label>
+    <input type="number" id="sayi3"><br><br>
+
+    <button onclick="carp()">Çarp</button>
+
+    <script>
+        function carp() {
+
+            let sayi1 = parseFloat(document.getElementById('sayi1').value);
+            let sayi2 = parseFloat(document.getElementById('sayi2').value);
+            let sayi3 = parseFloat(document.getElementById('sayi3').value);
+            
+            
+            let sonuc = sayi1 * sayi2 * sayi3;
+
+        
+            alert("Sonuç: " + sonuc);
+
+    
+            return sonuc;
+        }
+    </script>
+
+</body>
+</html>

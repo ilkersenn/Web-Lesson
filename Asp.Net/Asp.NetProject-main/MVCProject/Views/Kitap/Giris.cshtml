@@ -1,0 +1,14 @@
+@model MVCProject.Models.KullaniciModel
+<h2>Giriş</h2>
+<form method="post">
+    <label>Kullanıcı Adı:</label>
+    <input type="text" name="KullaniciAdi"/>
+    <br/>
+    <label>Şifre:</label>
+    <input type="password" name="Sifre"/>
+    <br/>
+    <button type="submit">Giriş Yap</button>
+</form>
+@if (ViewBag.Hata != null){ // Eğer ViewBag'den gelen Hata değişkeni boş değilse kırmızı şekilde ViewBag Hatadan gelen değer ekrana yazdırılır.
+    <p style="color: red;">@ViewBag.Hata</p>
+}
